@@ -42,7 +42,7 @@
     <main>
         <section class="popular-books" id="populares">
             <h2>Libros Populares</h2>
-            <div class="card-container">
+            <div class="card-container" id="card-container">
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro13.gif" alt="">
                     <h3>Titulo</h3>
@@ -98,21 +98,9 @@
                     </span>
                 </article>
             </div>
-            <a class="btn-all" href="">Mostrar Todos</a>
+            <a class="btn-all" id="btn-all" href="#">Mostrar Todos</a>
         </section>
-
-        <section class="reviews">
-            <h2>Reseñas</h2>
-            <div class="review-container">
-                <article class="review-card"></article>
-                <article class="review-card"></article>
-                <article class="review-card"></article>
-                <article class="review-card"></article>
-            </div>
-
-
-        </section>
-
+        
         <section class="categorias">
             <h2>Explora Categorias</h2>
             <nav>
@@ -164,12 +152,58 @@
                 </article>
             </div>
         </section>
+        
+        <section class="reviews">
+            <h2>Reseñas</h2>
+            <div class="review-container">
+                <article class="review-card">
+                    <img src="" alt="">               
+                    <blockquote>
+                        <p>"Una experiencia de compra sin complicaciones. Esta página de venta de libros ha hecho que mi proceso de compra sea súper fácil y conveniente. Con su diseño intuitivo, puedo encontrar libros interesantes y agregarlos a mi carrito en cuestión de minutos. Además, su proceso de pago seguro me brinda tranquilidad al ingresar mis datos personales"</p>
+                    </blockquote>
+                </article>
+                <article class="review-card">
+                    <img src="" alt="">               
+                    <blockquote>
+                        <p>"Variedad y calidad en cada página. Lo que más me gusta de esta página de venta de libros es la increíble variedad de títulos disponibles. Desde los clásicos hasta las últimas novedades, siempre encuentro algo que captura mi atención."</p>
+                       
+                    </blockquote>
+                </article>
+                <article class="review-card">
+                    <img src="" alt="">               
+                    <blockquote>
+                        <p>"Increíble atención al cliente. Recientemente tuve una consulta sobre un libro que estaba buscando y me comuniqué con el equipo de atención al cliente de la página de venta de libros. La respuesta fue rápida y extremadamente útil."</p>
+                 
+                    </blockquote>
+                </article>
+                <article class="review-card">
+                    <img src="" alt="">               
+                    <blockquote>
+                        <p>"¡Una experiencia de compra excepcional! La página de venta de libros ofrece una amplia selección de títulos de todos los géneros imaginables.¡Recomiendo encarecidamente esta página a todos los amantes de la lectura!"</p>
+                    </blockquote>
+                </article>
+            </div>
+
+
+        </section>
+
+        <section class="news">
+            <div class="container-news">
+                <h3>No te pierdas ninguna oportunidad de enriquecer tu vida con historias fascinantes y conocimiento inspirador. ¡Suscríbete ahora y forma parte de nuestra familia literaria! </h3>
+                <div class="group-input">
+                    <input type="email" class="email-input" placeholder="example@correo.com">
+                    <button type="submit" class="submit-btn">Suscribirse</button>
+                </div>
+                
+            </div>
+            
+        </section>
     </main>
 
     <footer>
         <p>&copy Reymer Isaac De La Cruz</p>
     </footer>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

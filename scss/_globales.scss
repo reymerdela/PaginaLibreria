@@ -1,183 +1,231 @@
 @use "componentes";
 @import "variables";
 @mixin maxCenter() {
-    max-width: 1140px;
-    margin: 0 auto;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 :root {
-    font-family: $main-font;
+  font-family: $main-font;
 }
 body {
-    color: $darker-font;
-    overflow-x: hidden;
-    width: 100%;
+  color: $darker-font;
+  overflow-x: hidden;
+  width: 100%;
 }
 .nav-bar {
-    display: none;
+  display: none;
 }
 
 .header {
+  display: flex;
+  background-color: $main-ligth;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  & .header-separator {
     display: flex;
-    background-color: $main-ligth;
-    justify-content: space-between;
-    padding: 15px;
     align-items: center;
-    position: sticky;
-    top: 0;
-    right: 0;
-    z-index: 5;
-    & .header-separator {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
-    
+    gap: 2rem;
+  }
 }
 .hero {
-    background: $main-ligth;
-}
-.hero-container {
+  background: $main-ligth;
+  & .hero-container {
     @include maxCenter();
-    display: flex;
+    @include flex();
     flex-wrap: wrap;
-    align-items: center;
     position: relative;
     overflow: hidden;
     & .hero-content {
-       padding: 2rem;
-       display: flex;
-       flex-direction: column;
-        justify-content: center;
-        align-items: self-start;
-        gap: 1rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: self-start;
+      gap: 1rem;
     }
 
     & .hero-img {
-        width: 100%;
-        height: 20rem; 
-        background: rgb(255,98,45);
-        background: linear-gradient(60deg, rgba(255,98,45,1) 0%, rgba(215,103,22,1) 23%, rgba(255,221,132,1) 79%);
-        & img {
-            display: block;
-            position: absolute;
-            width: 13rem;
-            transform: rotate(-10deg);
-            z-index: 1;
-            right: 0;
-            animation: anim-hero-img 4s linear infinite;
-        }
+      width: 100%;
+      height: 20rem;
+      background: rgb(255, 98, 45);
+      background: linear-gradient(
+        60deg,
+        rgba(255, 98, 45, 1) 0%,
+        rgba(215, 103, 22, 1) 23%,
+        rgba(255, 221, 132, 1) 79%
+      );
+      & img {
+        display: block;
+        position: absolute;
+        width: 13rem;
+        z-index: 1;
+        right: 0;
+        animation: anim-hero-img 8s ease-in-out infinite;
+      }
     }
+  }
 }
 
-
 .popular-books {
-    @include maxCenter();
-    padding: 2rem;
-    & h2 {
-        margin-bottom: 2rem;
-    }
-    & .btn-all {
-        display: inline-block;
-        margin-top: 2rem;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-    }
+  @include maxCenter();
+  padding: 2rem;
+  & h2 {
+    margin-bottom: 2rem;
+  }
+  & .btn-all {
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .categorias {
-    @include maxCenter();
-    padding: 2rem;
-    & ul {
-        margin-top: 1rem;
-        display: flex;
-        flex-flow: row wrap;
-        list-style: none;
-        font-size: 1.2rem;  
-        justify-content: center;
-        
-        gap: 1rem;
-    }
-    & li {
-        background-color: $main-orange;
-        font-weight: 600;
-        padding: 0.5rem;
-        border-radius: 10px;
-    }
-    & a {
-        text-decoration: none;
-        color: white;
-        
-    }
-    & a:hover {
-        cursor: pointer;
-        color: $main-orange;
-    }
+  @include maxCenter();
+  padding: 2rem;
+  & ul {
+    @include flex();
+    margin-top: 1rem;
+    flex-flow: row wrap;
+    list-style: none;
+    font-size: 1.2rem;
+    gap: 1rem;
+  }
+  & li {
+    background-color: $main-orange;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+  & li:hover {
+    background-color: $dark-orange;
+    cursor: pointer;
+  }
 }
 
 .reviews {
-    @include maxCenter();
-    padding: 2rem;
-
-    & .reviews-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-
-    }
-}
-
-footer {
-    text-align: center;
+  @include maxCenter();
+  & > h2 {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  & .review-container {
     background-color: $dark-font;
     color: white;
-    padding: 5rem;
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+  & .review-card {
+    padding: 2rem;
+  }
+}
+.news {
+    margin: 2rem 0 0 0;
+    background-color: $ligth-orange;
+    padding: 3rem 2rem;
+    text-align: center;
+    & .container-news {
+        @include maxCenter();
+    }
+    & .group-input {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    & .email-input {
+        border: none;
+        outline: none;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 60%;
+        border: 2px solid transparent;
+    }
+    & .submit-btn {
+        border: none;
+        padding: 0 1rem;
+        border-radius: 0 10px 10px 0;
+        background-color: $dark-font;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+        
+    }
+    & .email-input:focus {
+        border: 2px solid $celador;
+    }
+     & .submit-btn:hover {
+        cursor: pointer;
+        background-color: lighten($dark-font, 10);
+    }
+
+}
+footer {
+  text-align: center;
+  background-color: #031404;
+  color: white;
+  padding: 3rem;
 }
 
 @keyframes anim-hero-img {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(-5deg);
-    }
-    20%{
-        transform: rotate(-10deg);
-    }
-
-    50% {
-        transform: rotate(-20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-
-
 
 @media (min-width: 600px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr 1fr;
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .hero .hero-container {
+    flex-wrap: nowrap;
+    & .hero-img {
+      background: transparent;
     }
-    .hero-container {
-        flex-wrap: nowrap;
-        & .hero-img {
-            background: transparent;    
-        }
-    }
+  }
+
+  .review-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media (min-width: 800px){
-    .nav-bar {
-        display: flex;
-    }
-    .card-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .menu {
-        display: none;
-    }
+@media (min-width: 800px) {
+  .nav-bar {
+    display: flex;
+  }
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .menu {
+    display: none;
+  }
+  .reviews {
+    padding: 0 2rem;
+  }
 }
