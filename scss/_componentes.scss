@@ -1,0 +1,88 @@
+@import "variables";
+@mixin shadow-card{ 
+box-shadow:  1px 1px 10px 5px #bebebe,
+}
+
+
+
+
+.nav-bar {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+    
+    & a {   
+        text-decoration: none;
+        color: $dark-font;
+        position: relative;
+        font-weight: 600;
+        
+    }
+    & a::before {
+        
+    }
+    &  a:hover::before {
+        visibility: visible;
+        content: "";
+        bottom: 0;
+        position: absolute;
+        border-bottom: 2px solid $dark-font;
+        width: 100%;
+        
+    }
+}
+.cart img{
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+.menu {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.hero-cta {
+    background-color: $main-orange;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: white;   
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn-all {
+    background-color: $main-orange;
+    padding: 1rem 2rem;
+}
+.card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    @include shadow-card();
+    & .card-img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    & .autor a {
+        text-decoration: none;
+    }
+    & .card-span {
+        display: flex;
+        justify-content: space-between;
+    }
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+hr {
+    margin: 1rem 0;
+}
+

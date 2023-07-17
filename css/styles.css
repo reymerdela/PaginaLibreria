@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;500;600;800&display=swap");
+.nav-bar {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1rem;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: #283618;
+  position: relative;
+  font-weight: 600;
+}
+.nav-bar a:hover::before {
+  visibility: visible;
+  content: "";
+  bottom: 0;
+  position: absolute;
+  border-bottom: 2px solid #283618;
+  width: 100%;
+}
+
+.cart img {
+  width: 1.5rem;
+  vertical-align: middle;
+  margin-left: 2rem;
+}
+
+.menu {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.hero-cta {
+  background-color: #BC6C25;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-all {
+  background-color: #BC6C25;
+  padding: 1rem 2rem;
+}
+
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  box-shadow: 1px 1px 10px 5px #bebebe;
+}
+.card .card-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card .autor a {
+  text-decoration: none;
+}
+.card .card-span {
+  display: flex;
+  justify-content: space-between;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  color: #141b0c;
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  display: none;
+}
+
+.header {
+  display: flex;
+  background-color: #FEFAE0;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.header .header-separator {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero {
+  background: #FEFAE0;
+}
+
+.hero-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.hero-container .hero-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  gap: 1rem;
+}
+.hero-container .hero-img {
+  width: 100%;
+  z-index: 1;
+  height: 20rem;
+  background: rgb(255, 98, 45);
+  background: linear-gradient(60deg, rgb(255, 98, 45) 0%, rgb(215, 103, 22) 23%, rgb(255, 221, 132) 79%);
+  overflow-x: hidden;
+}
+.hero-container .hero-img img {
+  display: block;
+  position: absolute;
+  width: 13rem;
+  transform: rotate(-10deg);
+  z-index: 1;
+  right: 0;
+  animation: anim-hero-img 4s linear infinite;
+}
+
+.popular-books {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.popular-books h2 {
+  margin-bottom: 2rem;
+}
+.popular-books .btn-all {
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.recomendados-a {
+  background-color: aqua;
+}
+
+.categorias {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.categorias ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  justify-content: center;
+  background-color: #A2E3C4;
+}
+.categorias li {
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.categorias a {
+  text-decoration: none;
+  color: #141b0c;
+}
+.categorias a:hover {
+  cursor: pointer;
+  color: #BC6C25;
+}
+
+.reviews {
+  padding: 2rem;
+}
+.reviews .reviews-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer {
+  text-align: center;
+  background-color: #283618;
+  color: white;
+  padding: 5rem;
+}
+
+@keyframes anim-hero-img {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media (min-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .hero-container {
+    flex-wrap: nowrap;
+  }
+  .hero-container .hero-img {
+    background: transparent;
+  }
+}
+@media (min-width: 800px) {
+  .nav-bar {
+    display: flex;
+  }
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .menu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
