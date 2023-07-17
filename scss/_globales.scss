@@ -15,6 +15,7 @@
 body {
     color: $darker-font;
     overflow-x: hidden;
+    width: 100%;
 }
 .nav-bar {
     display: none;
@@ -46,6 +47,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     position: relative;
+    overflow: hidden;
     & .hero-content {
        padding: 2rem;
        display: flex;
@@ -57,11 +59,9 @@ body {
 
     & .hero-img {
         width: 100%;
-        z-index: 1;
         height: 20rem; 
         background: rgb(255,98,45);
         background: linear-gradient(60deg, rgba(255,98,45,1) 0%, rgba(215,103,22,1) 23%, rgba(255,221,132,1) 79%);
-        overflow-x: hidden;
         & img {
             display: block;
             position: absolute;
@@ -90,12 +90,6 @@ body {
     }
 }
 
-.recomendados-a {
-    background-color: aqua;
-
-}
-
-
 .categorias {
     @include maxCenter();
     padding: 2rem;
@@ -106,15 +100,19 @@ body {
         list-style: none;
         font-size: 1.2rem;  
         justify-content: center;
-        background-color: $celador;
+        
+        gap: 1rem;
     }
     & li {
+        background-color: $main-orange;
         font-weight: 600;
         padding: 0.5rem;
+        border-radius: 10px;
     }
     & a {
         text-decoration: none;
-        color: $darker-font;
+        color: white;
+        
     }
     & a:hover {
         cursor: pointer;
@@ -123,6 +121,7 @@ body {
 }
 
 .reviews {
+    @include maxCenter();
     padding: 2rem;
 
     & .reviews-container {

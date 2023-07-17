@@ -18,9 +18,8 @@ box-shadow:  1px 1px 10px 5px #bebebe,
         font-weight: 600;
         
     }
-    & a::before {
-        
-    }
+ 
+
     &  a:hover::before {
         visibility: visible;
         content: "";
