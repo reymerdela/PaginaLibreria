@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
@@ -13,23 +14,23 @@
         <h1>Logo</h1>
         <nav>
             <ul class="nav-bar" id="nav-bar">
-                <li><a href="">Inicio</a></li>
+                <li><a href="#">Inicio</a></li>
                 <li><a href="#populares">Populares</a></li>
-                <li><a href="">Autores</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="/secciones/autores.html">Autores</a></li>
+                <li><a href="/secciones/blog.html">Blog</a></li>
                 <li><a href="./secciones/membresia.html">Membresia</a></li>
             </ul>
         </nav>
         <div class="header-separator">
             <a href="" class="cart"><img src="./assets/icons/cart.svg" alt=""></a>
-            <a class="menu" id="nav-btn" href="">&#x2630</a>
+            <a class="menu" id="nav-btn" href="">&#x2630;</a>
         </div>
 
     </header>
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Encuentra tu próxima gran historia</h1>
+                <h2>Encuentra tu próxima gran historia</h2>
                 <p>Explora nuestra amplia selección de géneros literarios y descubre esa historia que te atrapará desde
                     la primera página.</p>
                 <a href="" class="hero-cta">Compra Ahora</a>
@@ -37,25 +38,26 @@
             <div class="hero-img">
                 <img id="hero-img" src="./assets/libros/libro1.gif" alt="">
             </div>
-        </div>
+        </div>  
     </section>
     <main>
-        <section class="popular-books" id="populares">
-            <h2>Libros Populares</h2>
+        <section class="popular-books" id="populares" >
+            <div></div>
+            <h3>Libros Populares</h3>
             <div class="card-container" id="card-container">
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro13.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>Animales fantásticos y dónde encontrarlos</h4>
+                    <p class="autor"><a href="">J.K.Rowling</a></p>
                     <span class="card-span">
-                        <span>Precio</span>
+                        <span>1200</span>
                         <img src="./assets/icons/cart.svg" alt="">
                     </span>
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro12.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>El Ángel de la Ciudad</h4>
+                    <p class="autor"><a href="">Eva G. Sáenz</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -63,8 +65,8 @@
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro11.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>Harry Potter y la piedra filosofal</h4>
+                    <p class="autor"><a href="">J.K. Rowling</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -72,8 +74,8 @@
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro10.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>El viento conoce mi nombre</h4>
+                    <p class="autor"><a href="">Isabel Allende</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -81,8 +83,8 @@
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro9.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>La guerra de los mundos</h4>
+                    <p class="autor"><a href="">H.G. Wells</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -90,52 +92,54 @@
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro8.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>Harry Potter y la Orden del Fenix</h4>
+                    <p class="autor"><a href="">J.K. Rowling</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
                     </span>
                 </article>
             </div>
-            <a class="btn-all" id="btn-all" href="#">Mostrar Todos</a>
+            <button class="btn-all" id="btn-all" href="#">Mostrar Todos</button>
         </section>
         
         <section class="categorias">
-            <h2>Explora Categorias</h2>
-            <nav>
+            <h3>Explora Categorias</h3>
+            <hr>
+            <nav class="nav-categorias">
                 <ul>
-                    <li><a href="">Aventura</a></li>
-                    <li><a href="">Ciencia ficcion</a></li>
-                    <li><a href="">Romance</a></li>
-                    <li><a href="">Drama</a></li>
-                    <li><a href="">Terror</a></li>
+                    <li><a href="#">Aventura</a></li>
+                    <li><a href="#">Ciencia ficcion</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Terror</a></li>
                 </ul>
             </nav>
-            <hr>
+
             <div class="card-container">
                 <article class="card">
-                    <img class="card-img" src="./assets/libros/libro1.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <img class="card-img" src="./assets/libros/libro2.gif" alt="">
+                    <h4>El Principito</h4>
+                    <p class="autor"><a href="">Antoine de Saint-Exupéry
+                    </a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
                     </span>
                 </article>
                 <article class="card">
-                    <img class="card-img" src="./assets/libros/libro4.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <img class="card-img" src="./assets/libros/libro14.gif" alt="">
+                    <h4>Juego de Tronos</h4>
+                    <p class="autor"><a href="">George R.R Martin</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
                     </span>
                 </article>
                 <article class="card">
-                    <img class="card-img" src="./assets/libros/libro12.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <img class="card-img" src="./assets/libros/libro5.gif" alt="">
+                    <h4>Un cuento perfecto</h4>
+                    <p class="autor"><a href="">Elisabet Benavent</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -143,8 +147,8 @@
                 </article>
                 <article class="card">
                     <img class="card-img" src="./assets/libros/libro6.gif" alt="">
-                    <h3>Titulo</h3>
-                    <p class="autor"><a href="">Autor</a></p>
+                    <h4>Los misterios de la taberna</h4>
+                    <p class="autor"><a href="">Hisashi Kashiwai</a></p>
                     <span class="card-span">
                         <span>Precio</span>
                         <img src="./assets/icons/cart.svg" alt="">
@@ -154,7 +158,7 @@
         </section>
         
         <section class="reviews">
-            <h2>Reseñas</h2>
+            <h3>Reseñas</h3>
             <div class="review-container">
                 <article class="review-card">
                     <img src="" alt="">               
@@ -201,7 +205,7 @@
     </main>
 
     <footer>
-        <p>&copy Reymer Isaac De La Cruz</p>
+        <p>&copy; Reymer Isaac De La Cruz</p>
     </footer>
     <script type="module" src="./js/index.js"></script>
 </body>

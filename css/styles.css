@@ -3,13 +3,17 @@
 .nav-bar {
   gap: 2rem;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .nav-bar a {
   text-decoration: none;
   color: #283618;
   position: relative;
   font-weight: 600;
+}
+.nav-bar li:hover {
+  transition: all 0.1s;
+  transform: scale(1.1);
 }
 .nav-bar a:hover::before {
   visibility: visible;
@@ -32,17 +36,27 @@
 }
 
 .hero-cta {
-  background-color: #BC6C25;
+  background-color: #a03b01;
   padding: 1rem 2rem;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   font-weight: 700;
 }
+.hero-cta:hover {
+  background-color: #d34e01;
+}
 
 .btn-all {
-  background-color: #BC6C25;
+  background-color: #a03b01;
   padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.btn-all:hover {
+  background-color: #d34e01;
+  cursor: pointer;
 }
 
 .card-container {
@@ -54,18 +68,37 @@
 
 .card {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 1px 1px 10px 3px #bebebe;
 }
+.card h4 {
+  color: #141b0c;
+}
 .card .card-img {
+  object-fit: cover;
   width: 100%;
   border-radius: 10px;
 }
 .card .autor a {
   text-decoration: none;
+  color: #141b0c;
 }
 .card .card-span {
   display: flex;
   justify-content: space-between;
+  font-weight: 700;
+}
+.card .card-span span::before {
+  content: "$";
+}
+.card .card-span img {
+  width: 1.5rem;
+}
+.card .card-span img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 .card:hover {
   transform: scale(1.05);
@@ -82,6 +115,10 @@ hr {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: "Overpass", sans-serif;
 }
@@ -92,6 +129,22 @@ body {
   width: 100%;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: calc(1.5rem + 1vw);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
 .nav-bar {
   display: none;
 }
@@ -100,7 +153,7 @@ body {
   display: flex;
   background-color: #FEFAE0;
   justify-content: space-between;
-  padding: 15px;
+  padding: 1rem 4vw;
   align-items: center;
   position: sticky;
   top: 0;
@@ -115,6 +168,7 @@ body {
 
 .hero {
   background: #FEFAE0;
+  overflow-x: hidden;
 }
 .hero .hero-container {
   max-width: 1140px;
@@ -124,17 +178,21 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  overflow: hidden;
 }
 .hero .hero-container .hero-content {
-  padding: 2rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: self-start;
   gap: 1rem;
 }
+.hero .hero-container .hero-content > p {
+  font-size: 1.2rem;
+}
 .hero .hero-container .hero-img {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 20rem;
   background: rgb(255, 98, 45);
@@ -149,13 +207,14 @@ body {
   animation: anim-hero-img 8s ease-in-out infinite;
 }
 
+main section > h3 {
+  padding: 1.5rem 0;
+}
+
 .popular-books {
   max-width: 1140px;
   margin: 0 auto;
   padding: 2rem;
-}
-.popular-books h2 {
-  margin-bottom: 2rem;
 }
 .popular-books .btn-all {
   display: inline-block;
@@ -166,42 +225,43 @@ body {
 }
 
 .categorias {
+  clear: both;
   max-width: 1140px;
   margin: 0 auto;
   padding: 2rem;
+}
+.categorias .nav-categorias {
+  padding: 2rem 0 3rem 0;
 }
 .categorias ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   flex-flow: row wrap;
   list-style: none;
   font-size: 1.2rem;
   gap: 1rem;
 }
 .categorias li {
-  background-color: #BC6C25;
+  background-color: #a03b01;
   font-weight: 600;
   padding: 0.5rem;
-  border-radius: 10px;
-}
-.categorias a {
-  text-decoration: none;
-  color: white;
 }
 .categorias li:hover {
   background-color: #6b2700;
   cursor: pointer;
+}
+.categorias a {
+  color: white;
+  text-decoration: none;
 }
 
 .reviews {
   max-width: 1140px;
   margin: 0 auto;
 }
-.reviews > h2 {
+.reviews > h3 {
   padding-left: 2rem;
-  margin-bottom: 2rem;
 }
 .reviews .review-container {
   background-color: #283618;
@@ -261,17 +321,6 @@ footer {
   padding: 3rem;
 }
 
-@keyframes anim-hero-img {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @media (min-width: 600px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -288,6 +337,12 @@ footer {
   }
 }
 @media (min-width: 800px) {
+  .hero {
+    padding: 2rem;
+  }
+  .hero .hero-img {
+    overflow-x: visible;
+  }
   .nav-bar {
     display: flex;
   }
